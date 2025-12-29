@@ -13,10 +13,7 @@ add_action('wp_enqueue_scripts', 'rtcamp_enqueue_styles');
 
 // Enqueue theme scripts
 function rtcamp_enqueue_scripts() {
-    // Load jQuery (WordPress built-in)
     wp_enqueue_script('jquery');
-
-    // Load custom JS
     wp_enqueue_script(
         'rtcamp-script',
         get_template_directory_uri() . '/js/main.js',
@@ -26,8 +23,6 @@ function rtcamp_enqueue_scripts() {
     );
 }
 add_action('wp_enqueue_scripts', 'rtcamp_enqueue_scripts');
-<?php
-// Existing enqueue code yahan pe hai
 
 // Register navigation menu
 function rtcamp_register_menus() {
