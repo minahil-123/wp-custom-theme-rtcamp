@@ -26,4 +26,16 @@ function rtcamp_enqueue_scripts() {
     );
 }
 add_action('wp_enqueue_scripts', 'rtcamp_enqueue_scripts');
+<?php
+// Existing enqueue code yahan pe hai
+
+// Register navigation menu
+function rtcamp_register_menus() {
+    register_nav_menus(
+        array(
+            'primary' => __('Primary Menu', 'rtcamp')
+        )
+    );
+}
+add_action('after_setup_theme', 'rtcamp_register_menus');
 
