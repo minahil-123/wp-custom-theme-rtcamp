@@ -9,3 +9,17 @@
 <header>
     <h2>Site Header</h2>
 </header>
+<header>
+    <h2>Site Header</h2>
+    <nav>
+        <?php
+        wp_nav_menu(
+            array(
+                'theme_location' => 'primary',
+                'container' => false,
+                'menu_class' => 'primary-menu'
+            )
+        );
+        ?>
+    </nav>
+</header>
